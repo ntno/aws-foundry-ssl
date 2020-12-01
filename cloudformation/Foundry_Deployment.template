@@ -560,7 +560,8 @@
 						]
 					}
 				}
-			}
+			},
+			"DependsOn": "UserKey"
 		},
 		"InstanceRole": {
 			"Type": "AWS::IAM::Role",

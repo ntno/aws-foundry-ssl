@@ -42,3 +42,4 @@ sudo sed -i 's|"awsConfig":.*|"awsConfig": "/foundrydata/Config/AWS.json",|g' /f
 
 # permissions
 sudo chown -R foundry /foundry
+sudo chgrp -R foundry /foundry

@@ -532,7 +532,7 @@
 								"sudo yum install -y git\n",
 								"cd /\n",
 								"git clone https://github.com/cat-box/aws-foundry-ssl.git\n",
-								"mkdir /foundry /foundrydata /aws-foundry-ssl/variables /foundryssl\n",
+								"mkdir /foundry /aws-foundry-ssl/variables /foundryssl\n",
 								
 								"echo '#!/bin/bash' >> /aws-foundry-ssl/variables/foundry_variables.sh\n",
 								"echo 'foundry_download_link=", { "Ref": "FoundryDownloadLink" }, "' >> /aws-foundry-ssl/variables/foundry_variables.sh\n",
@@ -541,6 +541,8 @@
 								"echo 'region=", { "Ref": "AWS::Region" }, "' >> /aws-foundry-ssl/variables/foundry_variables.sh\n",
 
 								"echo '#!/bin/bash' >> /foundryssl/variables.sh\n",
+								"echo 'foundry_user=foundry' >> /foundryssl/variables.sh\n",
+								"echo 'foundry_home=/foundrydata' >> /foundryssl/variables.sh\n",
 								"echo 'domain_registrar=", { "Ref": "DomainRegistrar" }, "' >> /foundryssl/variables.sh\n",
 								"echo 'api_key=", { "Ref": "APIKey" }, "' >> /foundryssl/variables.sh\n",
 								"echo 'api_secret=", { "Ref": "APISecret" }, "' >> /foundryssl/variables.sh\n",

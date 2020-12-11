@@ -20,6 +20,9 @@ case ${domain_registrar} in
         ;;
 esac
 
+# setup user and permissions
+source /aws-foundry-ssl/scripts/global/user.sh
+
 # install foundry
 source /aws-foundry-ssl/scripts/global/foundry.sh
 

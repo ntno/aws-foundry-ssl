@@ -25,7 +25,6 @@ rm foundry.zip
 # start foundry and add to boot
 sudo cp /aws-foundry-ssl/files/foundry/foundry.service /etc/systemd/system/foundry.service
 sudo chmod 644 /etc/systemd/system/foundry.service
-sudo chown ec2-user -R /foundry
 sudo systemctl daemon-reload
 sudo systemctl start foundry
 sudo systemctl enable foundry
@@ -42,5 +41,5 @@ sudo sed -i "s|REGIONHERE|${region}|g" /foundrydata/Config/AWS.json
 sudo sed -i 's|"awsConfig":.*|"awsConfig": "/foundrydata/Config/AWS.json",|g' /foundrydata/Config/options.json
 
 # allow rwx in the Data folder only for ec2-user
-sudo chown ec2-user -R /foundrydata/Data
-sudo chmod 755 -R /foundrydata/Data
+# sudo chown ec2-user -R /foundrydata/Data
+# sudo chmod 755 -R /foundrydata/Data

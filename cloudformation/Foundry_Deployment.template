@@ -112,7 +112,7 @@
 		},
 		"AMI": {
 			"Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-			"Description": "AWS managed ssm path for latest AMI in the CFN Deployment Region. Do not need to pass in a value",
+			"Description": "AWS managed ssm path for latest AMI in the CFN Deployment Region. Do not change this value.",
 			"Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
 		},
 		"FullyQualifiedDomainName": {
